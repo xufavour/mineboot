@@ -11,6 +11,7 @@ public class MinebootApplicationTests {
 
 	@Test
 	public void contextLoads() {
+
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.nightstory.mineboot.genericity;
+package com.nightstory.mineboot.java.genericity;
 
 public class Node<T> {
     private T data;

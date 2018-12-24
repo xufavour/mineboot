@@ -1,4 +1,4 @@
-package com.nightstory.mineboot.genericity;
+package com.nightstory.mineboot.java.genericity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,7 +14,6 @@ public class GenericityMain {
         swap(array,0,1);
         System.out.println(Arrays.toString(array));
         printList1(list); // ok
-//        printList1(list2); //compile error
         printList2(list); //ok
         printList2(list2); // ok
     }
