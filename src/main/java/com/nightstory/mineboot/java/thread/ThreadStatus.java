@@ -18,19 +18,15 @@ public class ThreadStatus {
             @Override
             public void run() {
                 try {
-                    TimeUnit.SECONDS.sleep(2);
+                    TimeUnit.SECONDS.sleep(20);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
                 System.out.println("i am a thread and id is " + Thread.currentThread().getName());
             }
         });
-        td.setName("hhhh");
         td.setPriority(10);
-
         td.start();
-
-
         System.out.println(Thread.currentThread().getThreadGroup() + "..main-----end");
 
     }

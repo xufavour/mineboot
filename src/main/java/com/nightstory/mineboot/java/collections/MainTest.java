@@ -12,9 +12,7 @@ public class MainTest {
         List<String> list = new ArrayList<>();
         List<String> vector = new Vector<>();
         List<String> linkList = new LinkedList<>();
-
         Map<String,String> hashMap = new HashMap<>();
-
         Map<String,String> treeMap = new TreeMap<>();
         testLinkHashMap();
     }
