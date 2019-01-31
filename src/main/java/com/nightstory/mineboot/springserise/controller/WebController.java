@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date: 2018/12/12
  */
 @RestController
-
 public class WebController {
 
 

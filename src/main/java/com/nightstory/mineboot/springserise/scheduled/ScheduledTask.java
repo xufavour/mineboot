@@ -1,9 +1,6 @@
 package com.nightstory.mineboot.springserise.scheduled;
 
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-
-import java.text.SimpleDateFormat;
 
 /**
  * @Author: putao
@@ -22,9 +19,5 @@ public class ScheduledTask {
 //        TimeUnit.SECONDS.sleep(10);
 //    }
 //
-    @Scheduled(fixedRate = 10000)
-    public void test2(){
-        System.out.print(Thread.currentThread().getId());
-        System.out.println("scheduled task 2"  + "   " + new SimpleDateFormat("yyyyMMdd HH:mm:ss").format(System.currentTimeMillis()));
-    }
+
 }

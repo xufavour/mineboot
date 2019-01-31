@@ -30,12 +30,6 @@ public class JsonUtil {
 
 
 
-
-
-
-
-
-
      static class ParameterizedTypeImpl implements ParameterizedType {
         private final Class raw;
         private final Type[] args;

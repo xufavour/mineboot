@@ -15,5 +15,6 @@ public class MinebootApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MinebootApplication.class, args);
+
 	}
 }
