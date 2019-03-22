@@ -1,7 +1,9 @@
 package com.nightstory.mineboot.java.thread;
 
 import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
  * @Author: putao
@@ -10,6 +12,9 @@ import java.util.concurrent.locks.ReentrantLock;
 public class LockDemo {
 
     public void simpleUse() throws InterruptedException {
+        ReadWriteLock readWriteLock = new ReentrantReadWriteLock();
+
+
         Lock lock = new ReentrantLock();
         new Thread(() -> {
             try {

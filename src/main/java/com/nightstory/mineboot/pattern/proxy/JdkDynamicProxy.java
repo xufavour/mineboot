@@ -1,26 +1,30 @@
 package com.nightstory.mineboot.pattern.proxy;
 
+import org.springframework.stereotype.Component;
+
 import java.lang.reflect.Proxy;
 
 /**
  * @Author: putao
  * @Date: 2019/1/9
  */
+@Component
 public class JdkDynamicProxy {
 
     public static void main(String[] args) {
-        MessageInterface msg = new Axx();
-        ProxyHelper helper = new ProxyHelper(msg);
+        ProxyHelper helper = new ProxyHelper(null);
         System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
-        MessageInterface proxy = (MessageInterface) Proxy.newProxyInstance(
-                MessageInterface.class.getClassLoader(), msg.getClass().getInterfaces(),helper);
-        proxy.content();
-        System.out.println(proxy.msgTo());
+        IEXInterface proxy = (IEXInterface) Proxy.newProxyInstance(JdkDynamicProxy.class.getClassLoader(), new Class[]{IEXInterface.class}, helper);
+        proxy.content2();
+        System.out.println();
     }
 
 
 }
-
+interface IEXInterface{
+    Object content();
+    Object content2();
+}
 
 
 

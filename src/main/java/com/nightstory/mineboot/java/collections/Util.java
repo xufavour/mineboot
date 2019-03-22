@@ -6,6 +6,5 @@ package com.nightstory.mineboot.java.collections;
  */
 public class Util {
     public static void main(String[] args) {
-
     }
 }

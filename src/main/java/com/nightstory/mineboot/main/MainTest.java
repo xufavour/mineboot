@@ -1,5 +1,8 @@
 package com.nightstory.mineboot.main;
 
+import com.nightstory.mineboot.pattern.proxy.Axx;
+import com.nightstory.mineboot.pattern.proxy.MessageInterface;
+
 /**
  * @Author: putao
  * @Date: 2018/12/22
@@ -11,11 +14,11 @@ public class MainTest {
     }
 
     public static void main(String[] args){
-        String str = "1,2，3";
-        String[] array = str.split(",");
-        for(int i : getTypeArray(str)){
-            System.out.println(i);
-        }
+        Class<?>[] interfaces = Axx.class.getInterfaces();
+        System.out.println(interfaces[0]);
+        System.out.println(MessageInterface.class.getInterfaces().length);
+        Class<?> cl = MessageInterface.class;
+
     }
     public static int[] getTypeArray(String type){
         String[] strArray = type.split(",");

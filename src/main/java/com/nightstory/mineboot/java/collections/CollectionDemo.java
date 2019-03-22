@@ -1,6 +1,6 @@
 package com.nightstory.mineboot.java.collections;
 
-import java.util.LinkedList;
+import java.util.*;
 
 /**
  * @Author: putao
@@ -8,8 +8,19 @@ import java.util.LinkedList;
  */
 public class CollectionDemo {
     public static void main(String[] args) {
-        System.out.println(Integer.MAX_VALUE + 1);
-        System.out.println(Integer.MIN_VALUE);
+        LinkedHashMap<Integer,String> linkedHashMap = new LinkedHashMap(16,0.75f,true);
+        linkedHashMap.put(1, "item1");
+        linkedHashMap.put(2, "item2");
+        linkedHashMap.put(3, "item3");
+        Set<Map.Entry<Integer, String>> entries = linkedHashMap.entrySet();
+        for(Map.Entry<Integer, String> entry : entries){
+            System.out.println(entry.getKey());
+        }
+        linkedHashMap.get(2);
+        linkedHashMap.get(1);
+        for(Map.Entry<Integer, String> entry : entries){
+            System.out.println(entry.getKey());
+        }
     }
 
 

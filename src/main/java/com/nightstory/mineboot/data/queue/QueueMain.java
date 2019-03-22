@@ -28,8 +28,9 @@ public class QueueMain {
 
     private static int id = 1;
     public static int getTaskId(){
-        final ReentrantLock lock = new ReentrantLock(false);;
+        final ReentrantLock lock = new ReentrantLock(false);
         lock.lock();
+
         try {
             return id++;
         } finally {

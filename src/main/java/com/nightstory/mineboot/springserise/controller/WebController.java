@@ -29,12 +29,19 @@ public class WebController {
         return true;
     }
 
-    @RequestMapping(value = "test",method = RequestMethod.GET)
+    @RequestMapping(value = "test2",method = RequestMethod.GET)
     public String get(){
         System.out.println(Thread.currentThread().getId());
         System.out.println(Thread.currentThread().getThreadGroup());
         System.out.println(Thread.currentThread().getPriority());
         return "hhh";
     }
-
+    @RequestMapping(value = "data/id",method = RequestMethod.GET)
+    public String print(int id) throws InterruptedException {
+        if(id == 1){
+            Thread.sleep(2000);
+        }
+        System.out.println(id);
+        return "hhh";
+    }
 }

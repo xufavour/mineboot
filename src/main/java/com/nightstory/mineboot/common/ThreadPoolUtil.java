@@ -7,15 +7,15 @@ import java.util.concurrent.Executors;
  * @Author: putao
  * @Date: 2018/11/28
  */
-public class ThreadPoolManager {
-    private ExecutorService executorService;
+public class ThreadPoolUtil {
+    public ExecutorService executorService;
 
 
-    private ThreadPoolManager(){
+    private ThreadPoolUtil(){
         executorService = Executors.newCachedThreadPool();
     }
 
-    public static ThreadPoolManager instance(){
+    public static ThreadPoolUtil instance(){
         return SingleHolder.SINGLETON;
     }
 
@@ -25,6 +25,6 @@ public class ThreadPoolManager {
 
 
     private static class SingleHolder{
-        private static final ThreadPoolManager SINGLETON = new ThreadPoolManager();
+        private static final ThreadPoolUtil SINGLETON = new ThreadPoolUtil();
     }
 }

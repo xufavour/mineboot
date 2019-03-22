@@ -51,8 +51,6 @@ public class MyApplication implements ApplicationContextAware {
                     System.out.println(method.getName());
                 }
             });
-
-
         }
         return cachedMappings;
     }

@@ -1,8 +1,6 @@
 package com.nightstory.mineboot.java.thread;
 
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 /**
  * @Author: putao
@@ -11,10 +9,9 @@ import java.util.concurrent.TimeUnit;
 public class ThreadStatus {
 
     public static void main(String[] args) {
-
         ThreadPoolExecutor executor = new ThreadPoolExecutor(1,2,10,
                 TimeUnit.SECONDS, new ArrayBlockingQueue<>(5),new ThreadPoolExecutor.DiscardOldestPolicy());
-        Thread td = new Thread(new Runnable() {
+        Thread td = new Thread(new Runnable(){
             @Override
             public void run() {
                 try {
@@ -32,10 +29,14 @@ public class ThreadStatus {
     }
 
     /**
-     * runnableTaskQueue
+     * BlockingQueue 阻塞队列
+     *
+     *ArrayBlockingQueue 有限队列,
+     *
      */
-    public void getTaskQueue(){
+    public BlockingQueue<Runnable> getBlockQueue(){
         ArrayBlockingQueue<Runnable> blockingQueue = new ArrayBlockingQueue<>(10);
+        return blockingQueue;
     }
 
 }

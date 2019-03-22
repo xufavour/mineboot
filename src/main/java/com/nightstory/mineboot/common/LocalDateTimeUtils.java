@@ -1,8 +1,6 @@
 package com.nightstory.mineboot.common;
 
 
-import com.nightstory.mineboot.bean.Student;
-
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
@@ -15,7 +13,7 @@ public class LocalDateTimeUtils {
 
     public static void main(String[] args) {
         ArrayQueue arrayQueue = new ArrayQueue(10);
-        Student student = new Student("12","d");
+//        Student student = new Student("12","d");
 
     }
 

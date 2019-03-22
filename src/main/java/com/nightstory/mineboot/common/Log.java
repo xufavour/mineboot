@@ -11,7 +11,6 @@ public class Log {
     public static boolean needLog = true;
 
 
-
     public static void d(String tag,String msg){
         if(!needLog) return;
         LoggerFactory.getLogger(tag).debug(msg);
