@@ -1,7 +1,6 @@
 package com.nightstory.mineboot.main;
 
-import com.nightstory.mineboot.pattern.proxy.Axx;
-import com.nightstory.mineboot.pattern.proxy.MessageInterface;
+import com.nightstory.mineboot.pattern.singleton.SingletonEnum;
 
 /**
  * @Author: putao
@@ -14,10 +13,11 @@ public class MainTest {
     }
 
     public static void main(String[] args){
-        Class<?>[] interfaces = Axx.class.getInterfaces();
-        System.out.println(interfaces[0]);
-        System.out.println(MessageInterface.class.getInterfaces().length);
-        Class<?> cl = MessageInterface.class;
+//        Class<?>[] interfaces = Axx.class.getInterfaces();
+//        System.out.println(interfaces[0]);
+//        System.out.println(MessageInterface.class.getInterfaces().length);
+//        Class<?> cl = MessageInterface.class;
+        SingletonEnum.INSTANCE.whateverMethod();
 
     }
     public static int[] getTypeArray(String type){

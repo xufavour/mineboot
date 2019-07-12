@@ -61,7 +61,6 @@ class SyncObject{
     public synchronized void setNumX(int value){
         System.out.println("线程" + Thread.currentThread().getId() +"进入XXX方法");
         try {
-
             TimeUnit.SECONDS.sleep(5);
             SynchronizedMain main = new SynchronizedMain();
             main.anotherObjectLock();

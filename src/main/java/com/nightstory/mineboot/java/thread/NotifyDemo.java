@@ -9,7 +9,6 @@ import java.util.concurrent.TimeUnit;
 public class NotifyDemo {
     public static void main(String[] args) throws InterruptedException {
         ThreadA a = new ThreadA();
-
         a.start();
         TimeUnit.SECONDS.sleep(3);
         Object object = new Object();

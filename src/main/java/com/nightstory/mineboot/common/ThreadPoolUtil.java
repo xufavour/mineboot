@@ -1,7 +1,9 @@
 package com.nightstory.mineboot.common;
 
+import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @Author: putao
@@ -12,7 +14,8 @@ public class ThreadPoolUtil {
 
 
     private ThreadPoolUtil(){
-        executorService = Executors.newCachedThreadPool();
+        executorService = new ThreadPoolExecutor(3,3,3 * 60,
+                TimeUnit.SECONDS,new ArrayBlockingQueue<>(5),new ThreadPoolExecutor.CallerRunsPolicy());
     }
 
     public static ThreadPoolUtil instance(){

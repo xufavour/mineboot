@@ -1,5 +1,7 @@
 package com.nightstory.mineboot.prepare.base_one;
 
+import java.util.concurrent.locks.LockSupport;
+
 /**
  * @Author: putao
  * @Date: 2019/2/18
@@ -7,14 +9,30 @@ package com.nightstory.mineboot.prepare.base_one;
 public class ThreadPart {
 
 
-    public static void main(String[] args) {
-        interruptOneThread();
+    public static void main(String[] args) throws InterruptedException {
+
+        Thread main = Thread.currentThread();
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("start");
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println(main.getState());
+                LockSupport.unpark(main);
+                System.out.println("end");
+
+            }
+        });
+        thread.start();
+        LockSupport.park(thread);
+//        LockSupport.unpark(thread);
+        System.out.println(thread.getState());
+
     }
-
-
-
-
-
 
 
 
@@ -60,6 +78,7 @@ public class ThreadPart {
         System.out.println(threadA.getState());
         System.out.println("start interrupt");
         threadA.interrupt();
+        Thread.interrupted();
         threadA.stop();
         System.out.println("main end");
     }

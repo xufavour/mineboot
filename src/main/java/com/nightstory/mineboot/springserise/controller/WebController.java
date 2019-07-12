@@ -19,7 +19,7 @@ public class WebController {
 
     private String LOG_TAG = "WebController";
 
-    @RequestMapping(value = "test",method = RequestMethod.POST)
+    @RequestMapping(value = "testAop",method = RequestMethod.POST)
     public boolean test(String json){
         try {
             System.out.println(Thread.currentThread().getId());

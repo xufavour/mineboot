@@ -30,7 +30,6 @@ public class QueueMain {
     public static int getTaskId(){
         final ReentrantLock lock = new ReentrantLock(false);
         lock.lock();
-
         try {
             return id++;
         } finally {

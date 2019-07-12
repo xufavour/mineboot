@@ -8,6 +8,23 @@ import java.util.*;
  */
 public class CollectionDemo {
     public static void main(String[] args) {
+//       testLinktest();
+        TreeMap<String,String> treeMap = new TreeMap<>(new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return 0;
+            }
+        });
+        treeMap.put(null, "");
+    }
+
+
+
+
+
+
+
+    public static void testLinktest(){
         LinkedHashMap<Integer,String> linkedHashMap = new LinkedHashMap(16,0.75f,true);
         linkedHashMap.put(1, "item1");
         linkedHashMap.put(2, "item2");
@@ -22,12 +39,6 @@ public class CollectionDemo {
             System.out.println(entry.getKey());
         }
     }
-
-
-
-
-
-
 
 
 

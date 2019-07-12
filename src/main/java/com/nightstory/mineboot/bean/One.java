@@ -19,6 +19,10 @@ public class One {
         protectedprintA();
     }
 
+    static void staticMethod(){
+        System.out.println();
+    }
+
     protected int a = 1;
     protected static int staA = 1;
     public static int staB = 1;

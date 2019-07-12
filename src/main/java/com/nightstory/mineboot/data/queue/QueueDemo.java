@@ -9,12 +9,48 @@ import java.util.concurrent.*;
  */
 public class QueueDemo {
 
-    public static void main(String[] args) throws InterruptedException {
-        QueueDemo instance = QueueDemo.instance();
+
+
+    public static void main(String[] args) throws InterruptedException, BrokenBarrierException {
+
+        CyclicBarrier barrier = new CyclicBarrier(2, new Runnable() {
+            @Override
+            public void run() {
+                System.out.println(Thread.currentThread() + ",barrierCommand");
+            }
+        });
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    barrier.await();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (BrokenBarrierException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+        barrier.await();
+        System.out.println("end");
+        // ArrayBlockingQueue
+//        LinkedBlockingQueue
+//        QueueDemo instance = QueueDemo.instance();
 //        instance.priorityQueueTest();
 //        instance.arrayBlockingQueueTest();
-        instance.synchronousQueueTest();
+//        instance.synchronousQueueTest();
+
     }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -103,7 +139,7 @@ public class QueueDemo {
 
 
     /**
-     * PriorityQueue 优先队列,最小堆结构,内存数组存储,初始容量11,可扩容,非线程安全,
+     * PriorityQueue 优先队列,最小堆结构,内存数组存储,初始容量11,可扩容,非线程安全,PriorityBlockingQueue线程安全
      * add/offer添加元素, pull返回队列头部(优先级最高)的元素,空队列返回null,remove()空队列抛出异常
      * 元素不可为null,需要继承Comparator或自定义传入Comparator
      * 时间复杂度：offer:O(logn) remove(Object o)/contain:O(n) pull/remove():O(1)

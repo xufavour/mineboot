@@ -17,7 +17,7 @@ public class ThreadFuture {
                 ThreadPoolUtil.instance().executorService);
         Callable<String> callable = () -> {
             try {
-                Thread.sleep(2000);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -26,7 +26,7 @@ public class ThreadFuture {
         };
         Callable<String> callable2 = () -> {
             try {
-                Thread.sleep(3000);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -40,7 +40,6 @@ public class ThreadFuture {
         System.out.println(completionService.take().get());
         System.out.println(completionService.take().get());
         System.out.println("end；");
-
 
     }
 

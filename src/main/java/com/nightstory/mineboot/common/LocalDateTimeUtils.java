@@ -14,7 +14,8 @@ public class LocalDateTimeUtils {
     public static void main(String[] args) {
         ArrayQueue arrayQueue = new ArrayQueue(10);
 //        Student student = new Student("12","d");
-
+        int cpu = Runtime.getRuntime().availableProcessors();
+        System.out.println(cpu);
     }
 
     /**

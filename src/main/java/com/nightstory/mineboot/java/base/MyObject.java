@@ -6,12 +6,19 @@ package com.nightstory.mineboot.java.base;
  */
 public class MyObject {
 
-    private int hash;
-    @Override
-    public String toString() {
-        return super.toString();
-    }
-    public static void main(String[] args) {
+    private int a = 9;
 
+    public int printMethod(){
+        System.out.println(a);
+        privateMethod();
+        return 1;
+    }
+
+    private void privateMethod(){
+        System.out.println("father private method");
+    }
+
+    private final void finalMethod(){
+        System.out.println("father final method");
     }
 }

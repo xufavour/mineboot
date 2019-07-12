@@ -23,7 +23,7 @@ public class AnnotationMain {
     }
 
     /**
-     * 注解(Annotation):可以创建一个注解,独立的java文件和被编译成字节码问题.不是类。
+     * 注解(Annotation):可以创建一个注解,独立的java文件和被编译成字节码文件.不是类。
      *
      * 元注解:用于自己创建的注解中。
      * Target:指定创建的注解使用的地方。
