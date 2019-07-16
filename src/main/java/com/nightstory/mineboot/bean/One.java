@@ -4,6 +4,7 @@ import com.nightstory.mineboot.common.Two;
 
 public class One {
 
+    public static final String str = "one";
     static {
         System.out.println("class One init" );
     }
@@ -14,13 +15,18 @@ public class One {
         System.out.println("class One Constrctor name:" + name);
     }
 
-    public void  OneMethod(){
+
+    public static void parStaticMethod(){
+        System.out.println("One parStaticMethod");
+    }
+
+    public void OneMethod(){
         System.out.println("one method");
         protectedprintA();
     }
 
-    static void staticMethod(){
-        System.out.println();
+    public static void staticMethod(){
+        System.out.println("One staticMethod");
     }
 
     protected int a = 1;

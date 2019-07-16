@@ -1,5 +1,7 @@
 package com.nightstory.mineboot.init;
 
+import com.nightstory.mineboot.bean.Student;
+
 import java.util.EventListener;
 
 /**
@@ -16,19 +18,18 @@ public final class TestJvmModel implements EventListener{
     private String str = "hello";
     public static String sStr = "static hello";
     public final String fStr = "final hello";
+    public static String sempty;
     public static final String sfStr = "aastatic final hello";
 
+    public final Student student = new Student("1","ls");
     public void testMethod(){
         int x = 0;
         System.out.println(x);
     }
 
-
+    private String testa = "a";
     public static void main(String[] args) {
         String a = "a";
-        for(int i = 0; i < 100;i++){
-            a = a + i;
-        }
-        System.out.println(a);
+        System.out.println();
     }
 }

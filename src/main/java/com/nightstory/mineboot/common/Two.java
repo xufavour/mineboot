@@ -24,6 +24,13 @@ public class Two extends One{
 
     }
 
+    public static void subStaticMethod(){
+        System.out.println("Two subStaticMethod");
+    }
+
+    public static void staticMethod(){
+        System.out.println("Two staticMethod");
+    }
     public static void main(String[] args) {
         Two two = new Two(2);
         two.OneMethod();

@@ -36,8 +36,7 @@ public class MainTest {
 class TestClass{
     final int a;
     static {
-        System.out.println("TestClass init " );
-
+        System.out.println("TestClass init ");
     }
     public TestClass(){
         a = 1;
